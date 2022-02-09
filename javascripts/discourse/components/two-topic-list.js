@@ -28,6 +28,7 @@ export default Component.extend({
   },
 
   get category() {
+    console.log("settings.category", settings.category);
     if (!this.categoriesLoaded) {
       return false;
     }
