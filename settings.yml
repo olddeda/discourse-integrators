@@ -1,35 +1,11 @@
-featured_topic_lists_title:
-  type: string
-  default: "Showcased Categories"
-  description: "Title for showcased categories lists section"
-feed_one_title:
-  type: string
-  default: "Custom List One"
-  description: "Title for left area of topics on homepage"
-feed_one_category:
+feed_category:
   type: list
   list_type: category
   default: ""
-  description: "Choose only ONE category for the Feed One topic list"
-feed_two_title:
-  type: string
-  default: "Custom List Two"
-  description: "Title for right area of topics on homepage"
-feed_two_category:
-  type: list
-  list_type: category
-  default: ""
-  description: "Choose only ONE category for the Feed Two topic list"
+  description: "Выберите категорию"
 max_list_length:
   type: integer
   default: 5
   min: 1
   max: 5
-  description: "How many topics should appear in the custom lists?"
-plugin_outlet:
-  type: enum
-  default: "above-main-container"
-  choices:
-    - "above-main-container"
-    - "below-site-header"
-  description: "Advanced setting for additional customization"
+  description: "Сколько показывать в списке топиков?"
