@@ -40,5 +40,5 @@ export default Component.extend({
     return currentRouteName === `discovery.${defaultHomepage()}`;
   },
 
-  showTopicLists: and("shouldShow", "category", "category")
+  showTopicLists: and("shouldShow", "category")
 });
