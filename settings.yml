@@ -9,3 +9,10 @@ max_list_length:
   min: 1
   max: 5
   description: "Сколько показывать в списке топиков?"
+plugin_outlet:
+  type: enum
+  default: "above-main-container"
+  choices:
+    - "above-main-container"
+    - "below-site-header"
+  description: "Advanced setting for additional customization"
