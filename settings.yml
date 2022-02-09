@@ -1,4 +1,4 @@
-feed_category:
+category:
   type: list
   list_type: category
   default: ""
