@@ -14,20 +14,19 @@ export default Component.extend({
       return
     };
 
-    let ids = [];
-    this.category.forEach(c => {
-      ids.push(c.id);
-    })
-    console.log('ids', ids);
-
-    const filter = {
-      filter: "latest",
-      params: {
-        category: ids,
-      },
-    };
-
     this.set("isLoading", true)
+
+    let topics = [];
+    this.category.forEach(c => {
+      const filter = {
+        filter: "latest",
+        params: {
+          category: c.id,
+        },
+      };
+      const t = await this.store.findFiltered("topicList", filter);
+      console.log('t', t);
+    })
 
     this.store.findFiltered("topicList", filter).then((topicList) => {
       this.set(
