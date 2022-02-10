@@ -31,21 +31,7 @@ export default Component.extend({
     if (!this.categoriesLoaded) {
       return false;
     }
-
-    let ids = settings.category.split('|');
-    if (!ids) {
-      ids = [settings.category];
-    }
-
-    let categories = [];
-    ids.forEach(id => {
-      const category = Category.findById(id);
-      if (category) {
-        categories.push(category);
-      }
-    })
-
-    return categories;
+    return Category.findById(settings.category);
   },
 
   @discourseComputed("router.currentRouteName")

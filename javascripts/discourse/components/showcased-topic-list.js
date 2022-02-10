@@ -16,28 +16,21 @@ export default Component.extend({
 
     this.set("isLoading", true)
 
-    let topics = [];
-    this.category.forEach(c => {
-      const filter = {
-        filter: "latest",
-        params: {
-          category: 5,
-        },
-      };
-      console.log("filter", filter);
-      this.store.findFiltered("topicList", filter).then((topicList) => {
-        console.log('t', topicList);
-      });
-    })
+    const filter = {
+      filter: "latest",
+      params: {
+        category: this.category.id,
+      },
+    };
 
-    // this.store.findFiltered("topicList", filter).then((topicList) => {
-    //   this.set(
-    //     "topicList",
-    //     topicList.topics.slice(0, settings.max_list_length)
-    //   );
-    //
-    //   this.set("isLoading", false)
-    // });
+    this.store.findFiltered("topicList", filter).then((topicList) => {
+      this.set(
+        "topicList",
+        topicList.topics.slice(0, settings.max_list_length)
+      );
+
+      this.set("isLoading", false)
+    });
   },
 
   @action
