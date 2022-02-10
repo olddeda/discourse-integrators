@@ -28,10 +28,14 @@ export default Component.extend({
   },
 
   get category() {
-    console.log("settings.category", settings.category);
     if (!this.categoriesLoaded) {
       return false;
     }
+
+    const ids = this.category.split('|');
+    console.log('ids', ids);
+
+    console.log("settings.category", settings.category);
     return Category.findById(settings.category);
   },
 
