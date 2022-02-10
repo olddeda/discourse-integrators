@@ -10,10 +10,10 @@
         <div data-topic-id="9770" id="ember101" class="tiles-grid-item topic-list-item category-proekty-integratorov-setpoint has-excerpt visited ember-view" style="grid-row-end: span NaN;">
                 <div class="tiles-grid-item-content">
                     <div class="image">
-                        {{#if topic.thumbnails}}
+                        {{#if t.thumbnails}}
                         <div class="topic-thumbnail">
                             <a href="{{t.lastPostUrl}}">
-                                <img class="thumbnail tiles-thumbnail" src="{{topic.thumbnails.1.url}}" style="height:auto;width:100%" loading="lazy">
+                                <img class="thumbnail tiles-thumbnail" src="{{t.thumbnails.1.url}}" style="height:auto;width:100%" loading="lazy">
                             </a>
                         </div>
                         {{/if}}
@@ -52,11 +52,11 @@
                             </div>
                         </div>
                         <a href="{{t.url}}"></a>
-                        {{#if topic.hasExcerpt}}
+                        {{#if t.hasExcerpt}}
                         <div class="topic-excerpt">
-                            {{dir-span topic.escapedExcerpt}}
-                            {{#if topic.excerptTruncated}}
-                                <a href="{{topic.url}}">{{i18n 'read_more'}}</a>
+                            {{dir-span t.escapedExcerpt}}
+                            {{#if t.excerptTruncated}}
+                                <a href="{{t.url}}">{{i18n 'read_more'}}</a>
                             {{/if}}
                         </div>
                         {{/if}}
