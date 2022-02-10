@@ -10,13 +10,11 @@ export default Component.extend({
   init() {
     this._super(...arguments);
 
-    console.log('this', this);
-
-    if (!this.categories) {
+    if (!this.category) {
       return
     };
 
-    const ids = this.categories.filter(s => s.id);
+    const ids = this.category.filter(s => s.id);
     console.log('ids', ids);
 
     const filter = {
