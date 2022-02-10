@@ -32,7 +32,7 @@ export default Component.extend({
       return false;
     }
 
-    const ids = this.category.split('|');
+    const ids = settings.category.split('|');
     console.log('ids', ids);
 
     console.log("settings.category", settings.category);
