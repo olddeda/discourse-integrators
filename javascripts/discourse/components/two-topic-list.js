@@ -27,7 +27,7 @@ export default Component.extend({
     return Category.list().length !== 0;
   },
 
-  get category() {
+  get categories() {
     if (!this.categoriesLoaded) {
       return false;
     }
@@ -36,7 +36,6 @@ export default Component.extend({
     if (!ids) {
       ids = [settings.category];
     }
-    console.log('ids', ids);
 
     let categories = [];
     ids.forEach(id => {
@@ -46,8 +45,7 @@ export default Component.extend({
       }
     })
 
-    console.log("settings.category", categories);
-    return Category.findById(settings.category);
+    return categories;
   },
 
   @discourseComputed("router.currentRouteName")
@@ -55,5 +53,5 @@ export default Component.extend({
     return currentRouteName === `discovery.${defaultHomepage()}`;
   },
 
-  showTopicLists: and("shouldShow", "category")
+  showTopicLists: and("shouldShow", "categories")
 });

@@ -10,17 +10,17 @@ export default Component.extend({
   init() {
     this._super(...arguments);
 
-    if (!this.category) {
+    if (!this.categories) {
       return
     };
 
-    const ids = this.category.split('|');
+    const ids = this.categories.filter(s => s.id);
     console.log('ids', ids);
 
     const filter = {
       filter: "latest",
       params: {
-        category: this.category.id,
+        category: 1,
       },
     };
 
