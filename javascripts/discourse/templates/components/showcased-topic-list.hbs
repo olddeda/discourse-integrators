@@ -45,7 +45,14 @@
                             </div>
                         </div>
                         <a href="{{t.url}}"></a>
-                        <a href="{{t.url}}" class="topic-excerpt">{{t.excerpt}}</a>
+                        {{#if topic.hasExcerpt}}
+                        <div class="topic-excerpt">
+                            {{dir-span topic.escapedExcerpt}}
+                            {{#if topic.excerptTruncated}}
+                                <a href="{{topic.url}}">{{i18n 'read_more'}}</a>
+                            {{/if}}
+                        </div>
+                        {{/if}}
 
                         <div class="topic-meta">
                             <div class="topic-views  inline sub">
