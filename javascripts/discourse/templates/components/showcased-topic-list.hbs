@@ -10,7 +10,14 @@
         <div data-topic-id="9770" id="ember101" class="tiles-grid-item topic-list-item category-proekty-integratorov-setpoint has-excerpt visited ember-view" style="grid-row-end: span NaN;">
                 <div class="tiles-grid-item-content">
                     <div class="image">
-                        <a href="{{t.url}}">
+                        {{#if topic.thumbnails}}
+                        <div class="topic-thumbnail">
+                            <a href="{{t.lastPostUrl}}">
+                                <img class="thumbnail tiles-thumbnail" src="{{topic.thumbnails.1.url}}" style="height:auto;width:100%" loading="lazy">
+                            </a>
+                        </div>
+                        {{/if}}
+                        <a href="{{t.lastPostUrl}}">
                             <div class="image-mask" style=""></div>
                         </a>
                     </div>
