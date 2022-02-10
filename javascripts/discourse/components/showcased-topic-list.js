@@ -7,7 +7,7 @@ import { readOnly } from "@ember/object/computed";
 export default Component.extend({
   moreHref: readOnly("category.url"),
 
-  init() {
+  async init() {
     this._super(...arguments);
 
     if (!this.category) {
