@@ -1,10 +1,7 @@
 <div class="header-wrapper">
-  <h2>{{title}}</h2>
+    <h2>{{title}}</h2>
 </div>
 {{#conditional-loading-spinner condition=isLoading}}
-  {{#each topicList as |t|}}
-   {{t.imageUrl}}
-   {{/each}}
-  {{topic-list topics=topicList showPosters=true}}
+    {{topic-list topics=topicList showPosters=true}}
 {{/conditional-loading-spinner}}
 <a href="{{moreHref}}" class="btn btn-more">More</a>
