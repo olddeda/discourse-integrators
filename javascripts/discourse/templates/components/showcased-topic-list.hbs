@@ -54,13 +54,11 @@
                             </div>
                         </div>
                         <a href="{{t.url}}"></a>
+
                         {{#if t.hasExcerpt}}
-                        <div class="topic-excerpt">
-                            {{dir-span t.escapedExcerpt}}
-                            {{#if t.excerptTruncated}}
-                                <a href="{{t.url}}">{{i18n 'read_more'}}</a>
-                            {{/if}}
-                        </div>
+                        <a href='{{t.url}}'>
+                            {{raw "list/topic-excerpt" t=topic}}
+                        </a>
                         {{/if}}
 
                         <div class="topic-meta">
