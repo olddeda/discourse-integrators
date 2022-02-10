@@ -40,17 +40,9 @@
                                 {{/each}}
                                 </div>
                             </div>
+
                             <div class="topic-category">
-                                <a class="badge-wrapper bullet" href="{{t.category.url}}">
-                                    <span class="badge-category-parent-bg" style="background-color: #F7941D;"></span>
-                                    <span class="badge-category-bg" style="background-color: #BF1E2E;"></span>
-                                    <span data-drop-close="true" class="badge-category clear-badge restricted" title="Автоматизация зданий и квартир. Подготовка проектов и контроль внедрения">
-                                        <svg class="fa d-icon d-icon-lock svg-icon svg-string" xmlns="http://www.w3.org/2000/svg">
-                                            <use xlink:href="#lock"></use>
-                                        </svg>
-                                        <span class="category-name">{{t.category.name}}</span>
-                                    </span>
-                                </a>
+                                {{category-link t.category}}
                             </div>
                         </div>
                         <a href="{{t.url}}"></a>
