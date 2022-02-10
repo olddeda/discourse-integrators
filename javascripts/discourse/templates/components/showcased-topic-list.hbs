@@ -14,11 +14,10 @@
                         <div class="topic-thumbnail">
                             <a href="{{t.url}}">
                                 <img class="thumbnail tiles-thumbnail" src="{{t.thumbnails.1.url}}" style="height:auto;width:100%" loading="lazy">
-                                {{preview-unbound thumbnails currentUser=currentUser site=site category=category opts=opts}}
                             </a>
                         </div>
                         {{/if}}
-                        <a href="{{t.lastPostUrl}}">
+                        <a href="{{t.url}}">
                             <div class="image-mask" style=""></div>
                         </a>
                     </div>
@@ -34,9 +33,11 @@
                             </div>
                             <div class="topic-users">
                                 <div class="inline">
-                                    <a href="/u/flagman" data-user-card="Flagman" class="latest single">
-                                        <img loading="lazy" alt="" width="25" height="25" src="/user_avatar/support.wirenboard.com/flagman/50/1081_2.png" class="avatar latest single" title="Flagman - Автор, Последний автор" aria-label="Flagman - Автор, Последний автор">
+                                {{#each t.posters as |poster|}}
+                                    <a href="{{poster.user.path}}" data-user-card="{{poster.user.username}}" class="{{poster.extras}}">
+                                        {{avatar poster avatarTemplatePath="user.avatar_template" usernamePath="user.username" imageSize="small"}}
                                     </a>
+                                {{/each}}
                                 </div>
                             </div>
                             <div class="topic-category">
