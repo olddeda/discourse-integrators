@@ -7,7 +7,7 @@ import { readOnly } from "@ember/object/computed";
 export default Component.extend({
   moreHref: readOnly("category.url"),
 
-  async init() {
+  init() {
     this._super(...arguments);
 
     if (!this.category) {
@@ -29,14 +29,14 @@ export default Component.extend({
       });
     })
 
-    this.store.findFiltered("topicList", filter).then((topicList) => {
-      this.set(
-        "topicList",
-        topicList.topics.slice(0, settings.max_list_length)
-      );
-
-      this.set("isLoading", false)
-    });
+    // this.store.findFiltered("topicList", filter).then((topicList) => {
+    //   this.set(
+    //     "topicList",
+    //     topicList.topics.slice(0, settings.max_list_length)
+    //   );
+    //
+    //   this.set("isLoading", false)
+    // });
   },
 
   @action
