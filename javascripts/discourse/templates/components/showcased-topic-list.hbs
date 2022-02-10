@@ -12,8 +12,9 @@
                     <div class="image">
                         {{#if t.thumbnails}}
                         <div class="topic-thumbnail">
-                            <a href="{{t.lastPostUrl}}">
+                            <a href="{{t.url}}">
                                 <img class="thumbnail tiles-thumbnail" src="{{t.thumbnails.1.url}}" style="height:auto;width:100%" loading="lazy">
+                                {{preview-unbound thumbnails currentUser=currentUser site=site category=category opts=opts}}
                             </a>
                         </div>
                         {{/if}}
@@ -39,7 +40,8 @@
                                 </div>
                             </div>
                             <div class="topic-category">
-                                <a class="badge-wrapper bullet" href="/c/proekty-integratorov/setpoint/36">
+                                "<span class="badge-wrapper bullet" ><span class='badge-category-bg' style='background-color: #BF1E2E;'></span><span  data-drop-close="true" class="badge-category clear-badge restricted"title="Автоматизация зданий и квартир. Подготовка проектов и контроль внедрения" ><svg class='fa d-icon d-icon-lock svg-icon svg-string' xmlns="http://www.w3.org/2000/svg"><use xlink:href="#lock" /></svg><span class="category-name" >Setpoint</span></span></span>"
+                                <a class="badge-wrapper bullet" href="{{t.category.url}}">
                                     <span class="badge-category-parent-bg" style="background-color: #F7941D;"></span>
                                     <span class="badge-category-bg" style="background-color: #BF1E2E;"></span>
                                     <span data-drop-close="true" class="badge-category clear-badge restricted" title="Автоматизация зданий и квартир. Подготовка проектов и контроль внедрения">
