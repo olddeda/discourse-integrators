@@ -8,10 +8,12 @@ category:
   default: ""
   description: "Выберите категорию"
 max_list_length:
-  type: integer
-  default: 5
-  min: 1
-  max: 5
+  type: enum
+  default: 3
+  choices:
+    - 3
+    - 6
+    - 9
   description: "Сколько показывать в списке топиков?"
 plugin_outlet:
   type: enum
