@@ -14,13 +14,16 @@ export default Component.extend({
       return
     };
 
-    const ids = this.category.filter(s => s.id);
+    let ids = [];
+    this.category.forEach(c => {
+      ids.push(c.id);
+    })
     console.log('ids', ids);
 
     const filter = {
       filter: "latest",
       params: {
-        category: 1,
+        category: ids,
       },
     };
 
