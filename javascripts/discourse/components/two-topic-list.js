@@ -27,7 +27,7 @@ export default Component.extend({
     return Category.list().length !== 0;
   },
 
-  get categories() {
+  get category() {
     if (!this.categoriesLoaded) {
       return false;
     }
@@ -53,5 +53,5 @@ export default Component.extend({
     return currentRouteName === `discovery.${defaultHomepage()}`;
   },
 
-  showTopicLists: and("shouldShow", "categories")
+  showTopicLists: and("shouldShow", "category")
 });
