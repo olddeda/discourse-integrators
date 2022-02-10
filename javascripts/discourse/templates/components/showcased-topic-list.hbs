@@ -2,6 +2,9 @@
   <h2>{{title}}</h2>
 </div>
 {{#conditional-loading-spinner condition=isLoading}}
+  {{#each topicList as |t|}}
+   {{t}}
+   {{/each}}
   {{topic-list topics=topicList showPosters=true}}
 {{/conditional-loading-spinner}}
 <a href="{{moreHref}}" class="btn btn-more">More</a>
