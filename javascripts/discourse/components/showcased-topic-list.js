@@ -10,6 +10,8 @@ export default Component.extend({
   init() {
     this._super(...arguments);
 
+    console.log('this', this);
+
     if (!this.categories) {
       return
     };
