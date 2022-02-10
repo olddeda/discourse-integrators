@@ -24,6 +24,7 @@ export default Component.extend({
           category: c.id,
         },
       };
+      console.log("filter", filter);
       this.store.findFiltered("topicList", filter).then((topicList) => {
         console.log('t', topicList);
       });
