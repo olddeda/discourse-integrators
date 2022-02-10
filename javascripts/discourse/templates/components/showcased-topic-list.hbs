@@ -1,4 +1,87 @@
+<div class="header-wrapper">
+    <h2>{{title}}</h2>
+</div>
 {{#conditional-loading-spinner condition=isLoading}}
-    {{topic-list topics=topicList showPosters=true}}
+<table id="ember98" class="topic-list showThumbnail tiles-style showExcerpt showActions ember-view">
+    <tbody class="topic-list-body">
+    {{#each topicList as |t|}}
+        <div data-topic-id="9770" id="ember101" class="tiles-grid-item topic-list-item category-proekty-integratorov-setpoint has-excerpt visited ember-view" style="grid-row-end: span NaN;">
+                <div class="tiles-grid-item-content">
+                    <div class="image">
+                        <a href="/t/primery-podklyucheniya-storonnego-oborudovaniya/9770">
+                            <div class="image-mask" style=""></div>
+                        </a>
+                    </div>
+                    <div class="topic-details">
+                        <div class="topic-header-grid">
+                            <div class="topic-title">
+                            <span class="link-top-line">
+                                <a href="/t/primery-podklyucheniya-storonnego-oborudovaniya/9770/7" role="heading" aria-level="2" class="title raw-link raw-topic-link" data-topic-id="9770">
+                                    {{t.title}}
+                                </a>
+                                <span class="topic-post-badges"></span>
+                            </span>
+                            </div>
+                            <div class="topic-users">
+                                <div class="inline">
+                                    <a href="/u/flagman" data-user-card="Flagman" class="latest single">
+                                        <img loading="lazy" alt="" width="25" height="25" src="/user_avatar/support.wirenboard.com/flagman/50/1081_2.png" class="avatar latest single" title="Flagman - Автор, Последний автор" aria-label="Flagman - Автор, Последний автор">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="topic-category">
+                                <a class="badge-wrapper bullet" href="/c/proekty-integratorov/setpoint/36">
+                                    <span class="badge-category-parent-bg" style="background-color: #F7941D;"></span>
+                                    <span class="badge-category-bg" style="background-color: #BF1E2E;"></span>
+                                    <span data-drop-close="true" class="badge-category clear-badge restricted" title="Автоматизация зданий и квартир. Подготовка проектов и контроль внедрения">
+                                        <svg class="fa d-icon d-icon-lock svg-icon svg-string" xmlns="http://www.w3.org/2000/svg">
+                                            <use xlink:href="#lock"></use>
+                                        </svg>
+                                        <span class="category-name">Setpoint</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="/t/primery-podklyucheniya-storonnego-oborudovaniya/9770"></a>
+                        <a href="/t/primery-podklyucheniya-storonnego-oborudovaniya/9770" class="topic-excerpt">
+                            В качестве примеров реализации подключения оборудования, поддерживающего Modbus показаны
+                            способы
+                            подключения и получения данных.
+                            Подключения ПВУ NAVEKA к Wirenboard
+                            Сенсорная панель 15D
+                        </a>
+
+                        <div class="topic-meta">
+                            <div class="topic-views  inline sub">
+                                <svg class="fa d-icon d-icon-far-eye svg-icon svg-string"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <use xlink:href="#far-eye"></use>
+                                </svg>
+                                <span class="number" title="Тема просмотрена 15 раз">15</span>
+                            </div>
+                            <span class="middot inline sub"></span>
+                            <div class="topic-replies posts-map  inline sub" title="">
+                                <a href="" class="posts-map badge-posts ">
+                                    <svg class="fa d-icon d-icon-far-comment svg-icon svg-string" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="#far-comment"></use>
+                                    </svg>
+                                    <span class="number">5</span>
+                                </a>
+                            </div>
+                            <span class="middot inline sub"></span>
+                            <div class=" age coldmap-low activity inline sub" title="Первое сообщение: 3 дек. 2021, 09:56 Последнее сообщение: 24 янв. 2022, 14:48">
+                                <a href="/t/primery-podklyucheniya-storonnego-oborudovaniya/9770/6">
+                                    <span class="relative-date" data-time="1643024921627" data-format="medium-with-ago">24 янв.</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    {{/each}}
+    </tbody>
+</table>
+{{topic-list topics=topicList showPosters=true}}
 {{/conditional-loading-spinner}}
 <a href="{{moreHref}}" class="btn btn-more">More</a>
