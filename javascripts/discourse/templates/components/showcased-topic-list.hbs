@@ -64,30 +64,20 @@
                         {{/if}}
 
                         <div class="topic-meta">
-                            <div class="topic-views  inline sub">
-                                <svg class="fa d-icon d-icon-far-eye svg-icon svg-string"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <use xlink:href="#far-eye"></use>
-                                </svg>
-                                <span class="number" title="Тема просмотрена 15 раз">15</span>
+                            {{raw-plugin-outlet name="topic-list-tiles-meta"}}
+                            <div class="topic-views {{t.viewsHeat}} inline sub">
+                                {{d-icon "far-eye"}}
+                                {{number t.views numberKey="views_long"}}
                             </div>
                             <span class="middot inline sub"></span>
-                            <div class="topic-replies posts-map  inline sub" title="">
-                                <a href="" class="posts-map badge-posts ">
-                                    <svg class="fa d-icon d-icon-far-comment svg-icon svg-string" xmlns="http://www.w3.org/2000/svg">
-                                        <use xlink:href="#far-comment"></use>
-                                    </svg>
-                                    <span class="number">5</span>
-                                </a>
+                            <div class="topic-replies posts-map inline sub" title="">
+                                <a href class="posts-map badge-posts">{{d-icon "far-comment"}}{{number t.replyCount}}</a>
                             </div>
                             <span class="middot inline sub"></span>
-                            <div class=" age coldmap-low activity inline sub" title="Первое сообщение: 3 дек. 2021, 09:56 Последнее сообщение: 24 янв. 2022, 14:48">
-                                <a href="{{t.lastPostUrl}}">
-                                    <span class="relative-date" data-time="1643024921627" data-format="medium-with-ago">24 янв.</span>
-                                </a>
+                            <div class="{{class}} {{cold-age-class t.createdAt startDate=t.bumpedAt class=""}} activity inline sub" title="{{{t.bumpedAtTitle}}}">
+                                <a href="{{t.lastPostUrl}}">{{format-date t.bumpedAt format="medium-with-ago" noTitle="true"}}</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
