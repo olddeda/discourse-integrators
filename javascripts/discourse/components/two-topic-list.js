@@ -32,10 +32,21 @@ export default Component.extend({
       return false;
     }
 
-    const ids = settings.category.split('|');
+    let ids = settings.category.split('|');
+    if (!ids) {
+      ids = [settings.category];
+    }
     console.log('ids', ids);
 
-    console.log("settings.category", settings.category);
+    let categories = [];
+    ids.forEach(id => {
+      const category = Category.findById(id);
+      if (category) {
+        categories.push(category);
+      }
+    })
+
+    console.log("settings.category", categories);
     return Category.findById(settings.category);
   },
 
