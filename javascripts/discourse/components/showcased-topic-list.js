@@ -14,6 +14,9 @@ export default Component.extend({
       return
     };
 
+    const ids = this.category.split('|');
+    console.log('ids', ids);
+
     const filter = {
       filter: "latest",
       params: {
