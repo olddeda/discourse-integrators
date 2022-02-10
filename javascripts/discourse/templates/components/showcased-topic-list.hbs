@@ -3,7 +3,7 @@
 </div>
 {{#conditional-loading-spinner condition=isLoading}}
   {{#each topicList as |t|}}
-   {{t}}
+   {{t.title}}
    {{/each}}
   {{topic-list topics=topicList showPosters=true}}
 {{/conditional-loading-spinner}}
